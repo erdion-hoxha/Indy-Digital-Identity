@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./indy-identity-system/indy_identity_system/wallet"
+    ]
+}

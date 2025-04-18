@@ -1,0 +1,17 @@
+README.md
+setup.py
+indy_identity_system/__init__.py
+indy_identity_system.egg-info/PKG-INFO
+indy_identity_system.egg-info/SOURCES.txt
+indy_identity_system.egg-info/dependency_links.txt
+indy_identity_system.egg-info/requires.txt
+indy_identity_system.egg-info/top_level.txt
+indy_identity_system/credentials/__init__.py
+indy_identity_system/identities/__init__.py
+indy_identity_system/identities/issuer.py
+indy_identity_system/ledger/__init__.py
+indy_identity_system/ledger/ledger_utils.py
+indy_identity_system/utils/__init__.py
+indy_identity_system/wallet/__init__.py
+indy_identity_system/wallet/wallet_manager.py
+indy_identity_system/wallet/wallet_utils.py

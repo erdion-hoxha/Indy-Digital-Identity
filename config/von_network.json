@@ -1,0 +1,11 @@
+{
+    "testnet": {
+        "genesis_url": "https://raw.githubusercontent.com/sovrin-foundation/sovrin/master/sovrin/pool_transactions_sandbox_genesis",
+        "nodes": [
+            "von-test-server1:9701",
+            "von-test-server2:9701",
+            "von-test-server3:9701",
+            "von-test-server4:9701"
+        ]
+    }
+}

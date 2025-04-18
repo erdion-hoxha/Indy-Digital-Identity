@@ -1,0 +1,6 @@
+{
+    "pool_name": "von_network",
+    "wallet_storage": "./wallet_storage",
+    "default_wallet_key": "secret_key_123",
+    "genesis_path": "./config/genesis.txn"
+  }
