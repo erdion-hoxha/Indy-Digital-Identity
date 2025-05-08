@@ -57,9 +57,9 @@ async def setup_new_schema():
         print(f"[SUCCESS] DID created: {issuer_did}")
 
         #  Create schema properly using anoncreds
-        schema_name = "PersonIdentity"
+        schema_name = "CollegeDegree"
         schema_version = "1.0"
-        schema_attributes = ["name", "surname", "dob", "gender", "address", "national_id", "citizenship"]
+        schema_attributes = ["name", "surname", "student_id", "university_name", "field_of_study", "degree", "graduation_date", "gpa", "country_of_issuance"]
         schema_id, schema_json = await anoncreds.issuer_create_schema(
             issuer_did, schema_name, schema_version, json.dumps(schema_attributes)
         )

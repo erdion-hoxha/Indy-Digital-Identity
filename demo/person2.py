@@ -12,7 +12,7 @@ async def main():
     holder_wallet_config = json.dumps({"id": "citizen_wallet"})
     holder_wallet_credentials = json.dumps({"key": "citizen_wallet_key"})
 
-    schema_name = "PersonIdentity"
+    schema_name = "CollegeDegree"
     schema_version = "1.0"
 
     try:
@@ -21,10 +21,7 @@ async def main():
         
         # Handle pool config
         try:
-            await pool.create_pool_ledger_config(
-                pool_name,
-                json.dumps({"genesis_txn": str(Path(genesis_path).resolve())})
-            )
+            await pool.create_pool_ledger_config(pool_name, json.dumps({"genesis_txn": str(Path(genesis_path).resolve())}))
             print("[SUCCESS] Created pool config")
         except IndyError as e:
             if "PoolLedgerConfigAlreadyExistsError" in str(e):
@@ -117,13 +114,15 @@ async def main():
         )
 
         cred_values = json.dumps({
-            "name": {"raw": "Alice", "encoded": "1139481716457488690172217916278103335"},
-            "surname": {"raw": "Smith", "encoded": "5321642780241790123587902456789123452"},
-            "dob": {"raw": "1995-07-28", "encoded": "19950728"},
-            "gender": {"raw": "F", "encoded": "70"},
-            "address": {"raw": "123 Main St", "encoded": "1234567890"},
-            "national_id": {"raw": "ABC123456", "encoded": "123456789"},
-            "citizenship": {"raw": "Albania", "encoded": "987654321"}
+            "name": {"raw": "Bob", "encoded": ""},
+            "surname": {"raw": "Dylan", "encoded": ""},
+            "student_id": {"raw": "94105796", "encoded": ""},
+            "university_name": {"raw": "UIUC", "encoded": ""},
+            "field_of_study": {"raw": "Electrical Engineering", "encoded": ""},
+            "degree": {"raw": "PhD", "encoded": ""},
+            "graduation_date": {"raw": "2025-12-31", "encoded": ""}
+            "gpa": {"raw": "4.0", "encoded": }
+            "country_of_issuance": {"raw": "USA", "encoded": }
         })
 
         (credential, _, _) = await anoncreds.issuer_create_credential(
