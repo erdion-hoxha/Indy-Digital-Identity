@@ -1,5 +1,7 @@
 # Hyperledger Indy with VON Network - Complete Setup Guide
 
+# Work completed
+@erdion-hoxha completed the full flow for an individual schema, including schema creation, credential generation, wallet storage, and verification.
 ## Full Installation Process
 
 ### Prerequisites Installation
