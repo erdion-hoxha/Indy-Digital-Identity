@@ -53,3 +53,25 @@ HOLDER_WALLET_CREDS='{"key":"holder_key"}'
 VERIFIER_WALLET_CONFIG='{"id":"verifier_wallet"}'
 VERIFIER_WALLET_CREDS='{"key":"verifier_key"}'
 EOF
+```
+
+### Added Employment Schema & Sample Credential
+
+After the basic network and SDK setup, Anshul did the following:
+
+1. **Defined an `EmploymentCredential` schema**  
+   - Attributes: `employee_name`, `employee_surname`, `employee_id`, `employer_name`, `position_title`, `department`, `start_date`, `end_date`, `employment_status`, `supervisor_name`, `city`, `state`, `country`  
+   - Created it on‐ledger via `anoncreds.issuer_create_schema`
+
+2. **Published a credential definition**  
+   - Used the new schema to make a cred-def with `anoncreds.issuer_create_and_store_credential_def`
+
+3. **Created a DID for a “person”**  
+   - Initialized an issuer and a holder wallet, then generated a pair of DIDs (issuer and holder)
+
+4. **Issued & stored a sample employment credential**  
+   - Built a `cred_values` JSON for an example employee  
+   - Ran `issuer_create_credential_offer`, `prover_create_credential_req`, and `issuer_create_credential` to issue and store it in the holder’s wallet
+
+5. **Verified the credential**  
+   - Simulated a verifier by pulling the proof from the holder and checking it against the schema and cred-def on the ledger
