@@ -55,6 +55,14 @@ VERIFIER_WALLET_CREDS='{"key":"verifier_key"}'
 EOF
 ```
 
+Fatemeh: 
+After setting up the VON network and SDK, I did the following:
+1. Defined the "Collegedegree" schema with the following attriutes: ["name", "surname", "student_id", "university_name", "field_of_study", "degree", "graduation_date", "gpa", "country_of_issuance"]
+2. I then published this new schema to make a credential definition with `anoncreds.issuer_create_and_store_credential_def`
+3. After creating and publishing the schema, I created a DID for a person. I first initilized an issuer and holder wallet and then generated the DID.
+4. Finally genertaed and issued a smaple college degree credential and verified it using the schema. 
+
+
 ### Added Employment Schema & Sample Credential
 
 After the basic network and SDK setup, Anshul did the following:
@@ -75,3 +83,4 @@ After the basic network and SDK setup, Anshul did the following:
 
 5. **Verified the credential**  
    - Simulated a verifier by pulling the proof from the holder and checking it against the schema and cred-def on the ledger
+
